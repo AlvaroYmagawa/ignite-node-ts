@@ -8,7 +8,7 @@ class AuthenticateUserController {
 
     const authenticateUserUseCase = container.resolve(AuthenticateUserUseCase);
 
-    const authenticateInfo = await authenticateUserUseCase.exucute({
+    const authenticateInfo = await authenticateUserUseCase.execute({
       email,
       password,
     });
