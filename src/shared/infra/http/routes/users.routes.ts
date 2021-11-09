@@ -1,9 +1,9 @@
 import { Router } from "express";
 import multer from "multer";
-import uploadConfig from "../config/upload";
+import uploadConfig from "../../../../config/upload";
 import { ensureAuthenticated } from "../middlewares/ensureAuthenticated";
-import { UpdateUserAvatarController } from "../modules/accounts/useCases/updateUserAvatar/UpdateUserAvatarController";
-import { CreateCategoryController } from "../modules/cars/useCases/createCategory/CreateCategoryController";
+import { UpdateUserAvatarController } from "../../../../modules/accounts/useCases/updateUserAvatar/UpdateUserAvatarController";
+import { CreateCategoryController } from "../../../../modules/cars/useCases/createCategory/CreateCategoryController";
 
 const usersRoutes = Router();
 
