@@ -1,4 +1,6 @@
 import { container } from "tsyringe";
+import { ICarsRepository } from "@modules/cars/repositories/ICarsRepository";
+import { CarsRepository } from "@modules/cars/infra/typeorm/repositories/CarsRepository";
 import { UsersRepository } from "../../modules/accounts/infra/typeorm/repositories/UserRepository";
 import { CategoryRepository } from "../../modules/cars/infra/typeorm/repositories/CategoryRepository";
 import { SpecificationRepository } from "../../modules/cars/infra/typeorm/repositories/SpecificationRepository";
@@ -20,3 +22,5 @@ container.registerSingleton<IUsersRepository>(
   "UsersRepository",
   UsersRepository
 );
+
+container.registerSingleton<ICarsRepository>("CarsRepository", CarsRepository);
