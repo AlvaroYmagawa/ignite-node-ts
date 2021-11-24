@@ -15,7 +15,7 @@ describe("Create Car", () => {
     const car = await createCarUseCase.execute({
       brand: "Brand",
       category_id: "category",
-      dayli_rate: 60,
+      daily_rate: 60,
       description: "Car descriptuion",
       fine_amount: 60,
       license_plate: "ABC-123",
@@ -30,7 +30,7 @@ describe("Create Car", () => {
       await createCarUseCase.execute({
         brand: "Brand",
         category_id: "category",
-        dayli_rate: 60,
+        daily_rate: 60,
         description: "Car descriptuion",
         fine_amount: 60,
         license_plate: "ABC-123",
@@ -40,7 +40,7 @@ describe("Create Car", () => {
       await createCarUseCase.execute({
         brand: "Brand",
         category_id: "category",
-        dayli_rate: 60,
+        daily_rate: 60,
         description: "Car descriptuion",
         fine_amount: 60,
         license_plate: "ABC-123",
@@ -53,13 +53,13 @@ describe("Create Car", () => {
     const car = await createCarUseCase.execute({
       name: "Car Available",
       description: "Description Car",
-      dayli_rate: 100,
+      daily_rate: 100,
       license_plate: "ABCD-1234",
       fine_amount: 60,
       brand: "Brand",
       category_id: "category",
     });
 
-    expect(car.avaiable).toBe(true);
+    expect(car.available).toBe(true);
   });
 });

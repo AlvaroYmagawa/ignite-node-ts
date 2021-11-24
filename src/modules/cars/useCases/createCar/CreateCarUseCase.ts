@@ -6,24 +6,24 @@ import { inject, injectable } from "tsyringe";
 interface IRequest {
   name: string;
   description: string;
-  dayli_rate: number;
+  daily_rate: number;
   license_plate: string;
   fine_amount: number;
   brand: string;
   category_id: string;
 }
 
-// @injectable()
+@injectable()
 class CreateCarUseCase {
   constructor(
-    // @inject("CarsRepository")
+    @inject("CarsRepository")
     private carsRepository: ICarsRepository
   ) {}
 
   async execute({
     brand,
     category_id,
-    dayli_rate,
+    daily_rate,
     description,
     fine_amount,
     license_plate,
@@ -38,7 +38,7 @@ class CreateCarUseCase {
     const car = await this.carsRepository.create({
       brand,
       category_id,
-      dayli_rate,
+      daily_rate,
       description,
       fine_amount,
       license_plate,
