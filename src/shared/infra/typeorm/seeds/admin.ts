@@ -13,6 +13,8 @@ async function create() {
     values('${id}', 'admin', 'admin@email.com', '${password}', true, 'now()', 'XXXX')
     `
   );
+
+  await connection.close();
 }
 
 create().then(() => console.log("Admin Created"));
