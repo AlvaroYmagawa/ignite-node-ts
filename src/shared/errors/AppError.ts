@@ -5,6 +5,6 @@ export class AppError {
 
   constructor(message: string, statusCode?: number) {
     this.message = message;
-    this.statusCode = statusCode;
+    this.statusCode = statusCode || 400;
   }
 }
